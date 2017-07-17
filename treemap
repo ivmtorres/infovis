@@ -7,19 +7,27 @@
 <div id="viz"></div>
 
 <script>
-  var sample_data = [
-    {"value": 100, "name": "alpha", "group": "group 1"},
-    {"value": 70, "name": "beta", "group": "group 2"},
-    {"value": 40, "name": "gamma", "group": "group 2"},
-    {"value": 15, "name": "delta", "group": "group 2"},
-    {"value": 5, "name": "epsilon", "group": "group 1"},
-    {"value": 1, "name": "zeta", "group": "group 1"}
-  ]
+  var sample_data = [{"carrera":"Ingeniero Eléctrico","cant":62},
+{"carrera":"Ingeniero Electrónico","cant":1046},
+{"carrera":"Ingeniero en Armas","cant":30},
+{"carrera":"Ingeniero en Informática","cant":370},
+{"carrera":"Ingeniero en Petróleo","cant":259},
+{"carrera":"Ingeniero Industrial","cant":3220},
+{"carrera":"Ingeniero Mecánico","cant":495},
+{"carrera":"Ingeniero Metalúrgico","cant":7},
+{"carrera":"Ingeniero Naval","cant":93},
+{"carrera":"Ingeniero Químico","cant":508},
+{"carrera":"Lic.en Administración y Sistemas","cant":338},
+{"carrera":"Licenciado en Análisis de Sistemas","cant":110},
+{"carrera":"Licenciado en Ciencias Meteorológicas","cant":1},
+{"carrera":"Licenciado en Hidrografía","cant":16},
+{"carrera":"Licenciado en Informática","cant":88},
+{"carrera":"Licenciado en Oceanografía","cant":115}]
   var visualization = d3plus.viz()
     .container("#viz")
     .data(sample_data)
     .type("tree_map")
-    .id(["group","name"])
-    .size("value")
+    .id("carrera")
+    .size("cant")
     .draw()
 </script>
